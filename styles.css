@@ -124,7 +124,7 @@ header ul a {
     height: 100vh;
     align-items: center;
     justify-content: space-between;
-    border: 3px solid rgb(255, 255, 255);
+    
     border-right: none;
     border-left: none;
     border-top: none;
@@ -134,6 +134,25 @@ header ul a {
     
 }
 
+
+/* FADEIN-BLUR */
+
+.fadeInBlur {
+    animation: fadeInBlur both;
+    animation-timeline: view();
+}
+
+@keyframes fadeInBlur{
+    0%{
+        backdrop-filter: blur(0px);
+    }
+    35%{
+        backdrop-filter: blur(10px);
+    }
+    100%{
+        backdrop-filter: blur(0px);
+    }
+}
 
 
 .hero-info {
@@ -280,7 +299,7 @@ header ul a {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin-top: 100px
+    margin-top: 50px
     
     
     
@@ -455,13 +474,32 @@ transition: 0.3s;
     margin-top: 200px;
     margin-bottom: 100px;
     padding: 0 20px;
-    backdrop-filter: blur(10px);
+    
     -webkit-backdrop-filter: blur(10px);
-    border: 3px solid rgb(255, 255, 255);
+    
     border-bottom: none;
     border-left: none;
     border-right: none;
     box-sizing: border-box;
+}
+
+/* FADEIN-BLUR */
+
+.fadeInBlurSecond {
+    animation: fadeInBlurSecond both;
+    animation-timeline: view();
+}
+
+@keyframes fadeInBlurSecond{
+    0%{
+        backdrop-filter: blur(0px);
+    }
+    10%, 30%{
+        backdrop-filter: blur(0px);
+    }
+    70%{
+        backdrop-filter: blur(10px);
+    }
 }
 
 .card-list{
@@ -602,6 +640,25 @@ footer h1{
     }
 }
 
+/*Blur Out Effect */
+
+.autoBlurOut{
+    animation: autoBlurOutAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurOutAnimation {
+    
+    35%, 50%{
+        filter: blur(0px);
+        opacity: 1
+    }
+    100%{
+        filter: blur(40px);
+        opacity: 0
+    }
+}
+
 /* AUTO DISPLAY */
 
 .autoDisplay{
@@ -622,6 +679,8 @@ footer h1{
         transform: translateX(0) scale(1);
     }
 }
+
+
 
 /* FADEIN-RIGHT */
 
